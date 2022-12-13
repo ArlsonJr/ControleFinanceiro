@@ -38,15 +38,14 @@ namespace ControleFinanceiro
                 {
                     JArray arrayUsuarios = (JArray)jObject["usuarios"];
 
-                    foreach (var item in arrayUsuarios.Where(x => x["id"].Value<string>() == this.idUsuario))
-                    {
-                        this.txtIdUser.Text = item["id"].ToString();
-                        this.txtNome.Text = item["nome"].ToString();
-                        this.txtCPF.Text = item["cpf"] == null ? "" : item["cpf"].ToString();
-                        this.txtRg.Text = item["rg"] == null ? "" : item["rg"].ToString();
-                        this.txtEndereco.Text = item["endereco"] == null ? "" : item["endereco"].ToString();
-                        this.txtTelefone.Text = item["telefone"] == null ? "" : item["telefone"].ToString();
-                    }
+                    var item = arrayUsuarios.Where(x => x["id"].Value<string>() == this.idUsuario).FirstOrDefault();
+
+                    this.txtIdUser.Text = item["id"].ToString();
+                    this.txtNome.Text = item["nome"].ToString();
+                    this.txtCPF.Text = item["cpf"] == null ? "" : item["cpf"].ToString();
+                    this.txtRg.Text = item["rg"] == null ? "" : item["rg"].ToString();
+                    this.txtEndereco.Text = item["endereco"] == null ? "" : item["endereco"].ToString();
+                    this.txtTelefone.Text = item["telefone"] == null ? "" : item["telefone"].ToString();
                 }
             }
             this.txtIdUser.Enabled = false;
