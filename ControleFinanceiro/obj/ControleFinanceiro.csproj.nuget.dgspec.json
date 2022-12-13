@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\Controle Financeiro Dário\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
+    "C:\\Projetos\\Controle Financeiro\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\Controle Financeiro Dário\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {
+    "C:\\Projetos\\Controle Financeiro\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\Controle Financeiro Dário\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "projectUniqueName": "C:\\Projetos\\Controle Financeiro\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
         "projectName": "ControleFinanceiro",
-        "projectPath": "C:\\Projetos\\Controle Financeiro Dário\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+        "projectPath": "C:\\Projetos\\Controle Financeiro\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
         "packagesPath": "C:\\Users\\pedrosaar\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\Controle Financeiro Dário\\ControleFinanceiro\\ControleFinanceiro\\obj\\",
+        "outputPath": "C:\\Projetos\\Controle Financeiro\\ControleFinanceiro\\ControleFinanceiro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

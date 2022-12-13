@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s4Z5Ih+Q9XMpjl5ADBdA+dIeeLqO0nRMskFhUSpRxERWCeO25g3kvUaF24A4luGBU3qi/dAY2RxLevMfZnVjhg==",
+  "dgSpecHash": "95q2G9bj9D+L7fdA5BsGIUvtfi75ad3KcPCOGVbZnjbkkoBiW+3ArGhd9UHCiNW85fqC8pQy84C0l7qhIjSvPQ==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\Controle Financeiro Dário\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
+  "projectFilePath": "C:\\Projetos\\Controle Financeiro\\ControleFinanceiro\\ControleFinanceiro\\ControleFinanceiro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedrosaar\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
   ],
