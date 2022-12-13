@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nome": "Arlson Junior",
+      "cpf": "123.321.456-11",
+      "rg": "",
+      "endereco": "",
+      "telefone": ""
+    },
+    {
+      "nome": "Fernanda Didier",
+      "cpf": "123.456.875-88",
+      "rg": "",
+      "endereco": "",
+      "telefone": ""
+    },
+    {
+      "nome": "Israel Sobreira",
+      "cpf": "123.789.456-78",
+      "rg": "",
+      "endereco": "",
+      "telefone": ""
+    }
+  ]
+}
