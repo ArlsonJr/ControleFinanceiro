@@ -1,13 +1,43 @@
 {
   "usuarios": [
     {
+      "id": "1",
       "nome": "Arlson Junior",
       "cpf": "123.321.456-11",
       "rg": "",
       "endereco": "",
-      "telefone": ""
+      "telefone": "92 3265-8954",
+      "emprestimos": [
+        {
+          "valor": 100,
+          "data": "12/12/2022",
+          "porcentagem": "",
+          "juros": 0,
+          "total": 0,
+          "amortizacao": [
+            {
+              "valor": 0,
+              "data": "12/12/2022"
+            }
+          ]
+        },
+        {
+          "valor": 73,
+          "data": "12/12/2022",
+          "porcentagem": "",
+          "juros": 0,
+          "total": 0,
+          "amortizacao": [
+            {
+              "valor": 0,
+              "data": "12/12/2022"
+            }
+          ]
+        }
+      ]
     },
     {
+      "id": "2",
       "nome": "Fernanda Didier",
       "cpf": "123.456.875-88",
       "rg": "",
@@ -15,11 +45,17 @@
       "telefone": ""
     },
     {
+      "id": "3",
       "nome": "Israel Sobreira",
       "cpf": "123.789.456-78",
       "rg": "",
       "endereco": "",
       "telefone": ""
+    },
+    {
+      "id": "4",
+      "nome": "Mais 1 teste",
+      "cpf": "###.###.###-##"
     }
   ]
 }

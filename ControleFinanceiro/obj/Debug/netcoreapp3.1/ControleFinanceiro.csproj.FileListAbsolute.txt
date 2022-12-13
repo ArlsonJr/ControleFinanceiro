@@ -17,3 +17,22 @@ C:\Projetos\Controle Financeiro Dário\ControleFinanceiro\ControleFinanceiro\bin
 C:\Projetos\Controle Financeiro Dário\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.CopyComplete
 C:\Projetos\Controle Financeiro Dário\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.AssemblyReference.cache
 C:\Projetos\Controle Financeiro Dário\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.frmUsuariosEdit.resources
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.exe
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.deps.json
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.runtimeconfig.json
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.runtimeconfig.dev.json
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.dll
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.pdb
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.AssemblyReference.cache
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.Usuarios.resources
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.frmUsuariosEdit.resources
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.GenerateResource.cache
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.AssemblyInfoInputs.cache
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.AssemblyInfo.cs
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.CoreCompileInputs.cache
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.CopyComplete
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.dll
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.pdb
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.genruntimeconfig.cache
