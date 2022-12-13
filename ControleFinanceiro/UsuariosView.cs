@@ -9,10 +9,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ControleFinanceiro
 {
-    public partial class Usuarios : Form
+    public partial class UsuariosView : Form
     {
         private string arquivoJson;
-        public Usuarios()
+        public UsuariosView()
         {
             InitializeComponent();
         }

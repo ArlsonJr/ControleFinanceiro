@@ -12,9 +12,9 @@ namespace ControleFinanceiro
     {
         private string arquivoJson;
         private string opcao;
-        private Usuarios frmUsuarios;
+        private UsuariosView frmUsuarios;
         private string idUsuario;
-        public frmUsuariosEdit(string opcao, string arquivoJson, Usuarios frmUsuarios, string idUsuario = null)
+        public frmUsuariosEdit(string opcao, string arquivoJson, UsuariosView frmUsuarios, string idUsuario = null)
         {
             InitializeComponent();
 

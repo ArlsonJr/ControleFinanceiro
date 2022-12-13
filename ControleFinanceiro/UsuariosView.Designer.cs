@@ -1,7 +1,7 @@
 ﻿
 namespace ControleFinanceiro
 {
-    partial class Usuarios
+    partial class UsuariosView
     {
         /// <summary>
         /// Required designer variable.
