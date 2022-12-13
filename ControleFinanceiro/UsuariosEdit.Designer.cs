@@ -30,6 +30,7 @@ namespace ControleFinanceiro
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtIdUser = new System.Windows.Forms.TextBox();
             this.btnExcluirAmortizacao = new System.Windows.Forms.Button();
             this.btnIncluirAmortizacao = new System.Windows.Forms.Button();
             this.btnExcluirEmprestimo = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@ namespace ControleFinanceiro
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtIdUser = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmortizacoes)).BeginInit();
@@ -83,6 +83,13 @@ namespace ControleFinanceiro
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(874, 588);
             this.panel1.TabIndex = 0;
+            // 
+            // txtIdUser
+            // 
+            this.txtIdUser.Location = new System.Drawing.Point(74, 24);
+            this.txtIdUser.Name = "txtIdUser";
+            this.txtIdUser.Size = new System.Drawing.Size(27, 23);
+            this.txtIdUser.TabIndex = 18;
             // 
             // btnExcluirAmortizacao
             // 
@@ -135,8 +142,12 @@ namespace ControleFinanceiro
             this.dgvAmortizacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAmortizacoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAmortizacoes.Location = new System.Drawing.Point(3, 19);
+            this.dgvAmortizacoes.MultiSelect = false;
             this.dgvAmortizacoes.Name = "dgvAmortizacoes";
+            this.dgvAmortizacoes.ReadOnly = true;
+            this.dgvAmortizacoes.RowHeadersVisible = false;
             this.dgvAmortizacoes.RowTemplate.Height = 25;
+            this.dgvAmortizacoes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAmortizacoes.Size = new System.Drawing.Size(418, 290);
             this.dgvAmortizacoes.TabIndex = 11;
             // 
@@ -155,10 +166,15 @@ namespace ControleFinanceiro
             this.dgvEmprestimos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmprestimos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmprestimos.Location = new System.Drawing.Point(3, 19);
+            this.dgvEmprestimos.MultiSelect = false;
             this.dgvEmprestimos.Name = "dgvEmprestimos";
+            this.dgvEmprestimos.ReadOnly = true;
+            this.dgvEmprestimos.RowHeadersVisible = false;
             this.dgvEmprestimos.RowTemplate.Height = 25;
+            this.dgvEmprestimos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEmprestimos.Size = new System.Drawing.Size(418, 290);
             this.dgvEmprestimos.TabIndex = 11;
+            this.dgvEmprestimos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmprestimos_CellClick);
             // 
             // txtTelefone
             // 
@@ -249,13 +265,6 @@ namespace ControleFinanceiro
             this.label1.Size = new System.Drawing.Size(31, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "CPF:";
-            // 
-            // txtIdUser
-            // 
-            this.txtIdUser.Location = new System.Drawing.Point(74, 24);
-            this.txtIdUser.Name = "txtIdUser";
-            this.txtIdUser.Size = new System.Drawing.Size(27, 23);
-            this.txtIdUser.TabIndex = 18;
             // 
             // frmUsuariosEdit
             // 

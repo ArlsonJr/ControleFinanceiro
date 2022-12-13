@@ -9,22 +9,32 @@
       "telefone": "92 3265-8954",
       "emprestimos": [
         {
+          "id_Emprt": 1,
           "valor": 100,
           "data": "12/12/2022",
-          "porcentagem": "",
+          "porcentagem": 25,
           "juros": 0,
           "total": 0,
           "amortizacao": [
             {
-              "valor": 0,
-              "data": "12/12/2022"
+              "valor": 25,
+              "data": "10/12/2022"
+            },
+            {
+              "valor": 25,
+              "data": "11/12/2022"
+            },
+            {
+              "valor": 25,
+              "data": "13/12/2022"
             }
           ]
         },
         {
-          "valor": 73,
+          "id_Emprt": 2,
+          "valor": 73.50,
           "data": "12/12/2022",
-          "porcentagem": "",
+          "porcentagem": 30,
           "juros": 0,
           "total": 0,
           "amortizacao": [
