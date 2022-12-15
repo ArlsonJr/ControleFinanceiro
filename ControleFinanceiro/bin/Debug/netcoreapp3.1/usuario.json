@@ -1,0 +1,29 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "TESTE FINAL",
+      "cpf": "901.451.587-89",
+      "rg": "1718196-5",
+      "endereco": "Rua da Lama S/N Japiim 2",
+      "telefone": "",
+      "emprestimos": [
+        {
+          "id_Emprt": "1",
+          "valor": "3.000",
+          "data": "15/12/2022",
+          "porcentagem": "20",
+          "juros": "600,00",
+          "total": "3.600,00",
+          "amortizacao": [
+            {
+              "id_amort": "1",
+              "valor": "600",
+              "data": "15/12/2022"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

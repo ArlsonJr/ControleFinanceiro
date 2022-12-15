@@ -36,8 +36,12 @@ namespace ControleFinanceiro
             this.btnIncluirEmprestimo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvAmortizacoes = new System.Windows.Forms.DataGridView();
+            this.cmsAmortizacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiExcluirAmortizacao = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEmprestimos = new System.Windows.Forms.DataGridView();
+            this.cmsEmprestimos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiExcluirEmprestimo = new System.Windows.Forms.ToolStripMenuItem();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
@@ -49,17 +53,13 @@ namespace ControleFinanceiro
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmsEmprestimos = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.cmsAmortizacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmortizacoes)).BeginInit();
+            this.cmsAmortizacoes.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimos)).BeginInit();
             this.cmsEmprestimos.SuspendLayout();
-            this.cmsAmortizacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -142,6 +142,20 @@ namespace ControleFinanceiro
             this.dgvAmortizacoes.Size = new System.Drawing.Size(418, 290);
             this.dgvAmortizacoes.TabIndex = 11;
             // 
+            // cmsAmortizacoes
+            // 
+            this.cmsAmortizacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiExcluirAmortizacao});
+            this.cmsAmortizacoes.Name = "cmsAmortizacoes";
+            this.cmsAmortizacoes.Size = new System.Drawing.Size(110, 26);
+            // 
+            // tsmiExcluirAmortizacao
+            // 
+            this.tsmiExcluirAmortizacao.Name = "tsmiExcluirAmortizacao";
+            this.tsmiExcluirAmortizacao.Size = new System.Drawing.Size(109, 22);
+            this.tsmiExcluirAmortizacao.Text = "Excluir";
+            this.tsmiExcluirAmortizacao.Click += new System.EventHandler(this.tsmiExcluirAmortizacao_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvEmprestimos);
@@ -171,6 +185,20 @@ namespace ControleFinanceiro
             this.dgvEmprestimos.TabIndex = 11;
             this.dgvEmprestimos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmprestimos_CellClick);
             // 
+            // cmsEmprestimos
+            // 
+            this.cmsEmprestimos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiExcluirEmprestimo});
+            this.cmsEmprestimos.Name = "cmsEmprestimos";
+            this.cmsEmprestimos.Size = new System.Drawing.Size(110, 26);
+            // 
+            // tsmiExcluirEmprestimo
+            // 
+            this.tsmiExcluirEmprestimo.Name = "tsmiExcluirEmprestimo";
+            this.tsmiExcluirEmprestimo.Size = new System.Drawing.Size(109, 22);
+            this.tsmiExcluirEmprestimo.Text = "Excluir";
+            this.tsmiExcluirEmprestimo.Click += new System.EventHandler(this.tsmiExcluirEmprestimo_Click);
+            // 
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(74, 180);
@@ -198,7 +226,7 @@ namespace ControleFinanceiro
             // 
             this.txtRg.Location = new System.Drawing.Point(74, 102);
             this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(225, 23);
+            this.txtRg.Size = new System.Drawing.Size(100, 23);
             this.txtRg.TabIndex = 7;
             // 
             // label3
@@ -261,32 +289,6 @@ namespace ControleFinanceiro
             this.label1.TabIndex = 0;
             this.label1.Text = "CPF:";
             // 
-            // cmsEmprestimos
-            // 
-            this.cmsEmprestimos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excluirToolStripMenuItem});
-            this.cmsEmprestimos.Name = "cmsEmprestimos";
-            this.cmsEmprestimos.Size = new System.Drawing.Size(110, 26);
-            // 
-            // cmsAmortizacoes
-            // 
-            this.cmsAmortizacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excluirToolStripMenuItem1});
-            this.cmsAmortizacoes.Name = "cmsAmortizacoes";
-            this.cmsAmortizacoes.Size = new System.Drawing.Size(110, 26);
-            // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir";
-            // 
-            // excluirToolStripMenuItem1
-            // 
-            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
-            this.excluirToolStripMenuItem1.Text = "Excluir";
-            // 
             // frmUsuariosEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -300,10 +302,10 @@ namespace ControleFinanceiro
             this.panel1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmortizacoes)).EndInit();
+            this.cmsAmortizacoes.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimos)).EndInit();
             this.cmsEmprestimos.ResumeLayout(false);
-            this.cmsAmortizacoes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -331,7 +333,7 @@ namespace ControleFinanceiro
         private System.Windows.Forms.TextBox txtIdUser;
         private System.Windows.Forms.ContextMenuStrip cmsAmortizacoes;
         private System.Windows.Forms.ContextMenuStrip cmsEmprestimos;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExcluirAmortizacao;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExcluirEmprestimo;
     }
 }

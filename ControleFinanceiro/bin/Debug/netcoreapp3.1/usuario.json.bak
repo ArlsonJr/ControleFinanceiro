@@ -64,7 +64,14 @@
           "data": "15/12/2022",
           "porcentagem": "25",
           "juros": "125,00",
-          "total": "625,00"
+          "total": "625,00",
+          "amortizacao": [
+            {
+              "id_amort": "1",
+              "valor": "100",
+              "data": "15/12/2022"
+            }
+          ]
         },
         {
           "id_Emprt": "2",
@@ -82,12 +89,64 @@
       "cpf": "123.789.456-78",
       "rg": "",
       "endereco": "",
-      "telefone": ""
+      "telefone": "",
+      "emprestimos": [
+        {
+          "id_Emprt": "1",
+          "valor": "1000",
+          "data": "15/12/2022",
+          "porcentagem": "30",
+          "juros": "300,00",
+          "total": "1.300,00"
+        }
+      ]
     },
     {
       "id": "4",
       "nome": "Mais 1 teste",
-      "cpf": "###.###.###-##"
+      "cpf": "###.###.###-##",
+      "emprestimos": [
+        {
+          "id_Emprt": "1",
+          "valor": "1.500",
+          "data": "15/12/2022",
+          "porcentagem": "20",
+          "juros": "300,00",
+          "total": "1.800,00",
+          "amortizacao": [
+            {
+              "id_amort": "1",
+              "valor": "500",
+              "data": "15/12/2022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "nome": "TESTE FINAL",
+      "cpf": "901.451.587-89",
+      "rg": "1718196-5",
+      "endereco": "Rua da Lama S/N Japiim 2",
+      "telefone": "",
+      "emprestimos": [
+        {
+          "id_Emprt": "1",
+          "valor": "3.000",
+          "data": "15/12/2022",
+          "porcentagem": "20",
+          "juros": "600,00",
+          "total": "3.600,00",
+          "amortizacao": [
+            {
+              "id_amort": "1",
+              "valor": "600",
+              "data": "15/12/2022"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

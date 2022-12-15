@@ -24,7 +24,6 @@ C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.dll
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.pdb
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
-C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.AssemblyReference.cache
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.frmUsuariosEdit.resources
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.csproj.GenerateResource.cache
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.GeneratedMSBuildEditorConfig.editorconfig

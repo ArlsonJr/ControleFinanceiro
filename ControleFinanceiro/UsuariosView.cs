@@ -36,8 +36,11 @@ namespace ControleFinanceiro
             {
                 this.arquivoJson = Environment.CurrentDirectory;
                 arquivoJson = arquivoJson.Replace("\\bin\\Debug\\netcoreapp3.1", "");
-                arquivoJson = arquivoJson + "\\Dados\\usuario.json";
+                arquivoJson = arquivoJson + "\\usuario.json";
                 var json = File.ReadAllText(arquivoJson);
+
+                if (json == "")
+                    return;
 
                 var jObject = JObject.Parse(json);
 

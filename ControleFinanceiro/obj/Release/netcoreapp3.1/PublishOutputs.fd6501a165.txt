@@ -1,0 +1,6 @@
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Release\netcoreapp3.1\publish\ControleFinanceiro.exe
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Release\netcoreapp3.1\publish\ControleFinanceiro.dll
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Release\netcoreapp3.1\publish\ControleFinanceiro.deps.json
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Release\netcoreapp3.1\publish\ControleFinanceiro.runtimeconfig.json
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Release\netcoreapp3.1\publish\ControleFinanceiro.pdb
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Release\netcoreapp3.1\publish\Newtonsoft.Json.dll

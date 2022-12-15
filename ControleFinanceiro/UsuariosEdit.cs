@@ -145,7 +145,7 @@ namespace ControleFinanceiro
 
                     id++;
 
-                    var newUser = "{\"id\": \"" + id + "\"," + "\"nome\": \"" + this.txtNome.Text + "\"," + "\"cpf\": \"" + this.txtCPF.Text + "\"}";
+                    var newUser = "{\"id\": \"" + id + "\"," + "\"nome\": \"" + this.txtNome.Text + "\"," + "\"cpf\": \"" + this.txtCPF.Text + "\"," + "\"rg\": \"" + this.txtRg.Text + "\"," + "\"endereco\": \"" + this.txtEndereco.Text + "\"," + "\"telefone\": \"" + this.txtTelefone.Text + "\"}";
 
                     var novoUsuario = JObject.Parse(newUser);
 
@@ -173,6 +173,7 @@ namespace ControleFinanceiro
             {
                 DataTable table = new DataTable();
 
+                table.Columns.Add("Id".ToString());
                 table.Columns.Add("Data".ToString());
                 table.Columns.Add("Valor".ToString());
 
@@ -190,16 +191,20 @@ namespace ControleFinanceiro
 
                     if (emprestimos != null)
                     {
-                        var armortizacao = emprestimos["amortizacao"];
+                        var amortizacao = emprestimos["amortizacao"];
 
-                        foreach (var amorte in armortizacao)
+                        if (amortizacao != null)
                         {
-                            DataRow dr = table.NewRow();
+                            foreach (var amorte in amortizacao)
+                            {
+                                DataRow dr = table.NewRow();
 
-                            dr["Data"] = amorte["data"].ToString();
-                            dr["Valor"] = amorte["valor"].ToString();
+                                dr["Id"] = amorte["id_amort"].ToString();
+                                dr["Data"] = amorte["data"].ToString();
+                                dr["Valor"] = amorte["valor"].ToString();
 
-                            table.Rows.Add(dr);
+                                table.Rows.Add(dr);
+                            }
                         }
                     }
                 }
@@ -207,17 +212,23 @@ namespace ControleFinanceiro
                 this.dgvAmortizacoes.DataSource = null;
                 this.dgvAmortizacoes.DataSource = table;
 
-                this.dgvAmortizacoes.Columns[0].Width = 75;
+                this.dgvAmortizacoes.Columns[0].Width = 25;
                 this.dgvAmortizacoes.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                this.dgvAmortizacoes.Columns[1].Width = 60;
-                this.dgvAmortizacoes.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-
+                this.dgvAmortizacoes.Columns[1].Width = 75;
+                this.dgvAmortizacoes.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                this.dgvAmortizacoes.Columns[2].Width = 60;
+                this.dgvAmortizacoes.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
         }
 
         private void btnIncluirEmprestimo_Click(object sender, EventArgs e)
         {
+            if (this.txtIdUser.TextLength == 0)
+            {
+                MessageBox.Show("Primeira salve o usuário para criar o id - Número identificador!", "BUGOU", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
             if (MessageBox.Show("Deseja incluir um emprestimo?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
                 return;
@@ -230,10 +241,30 @@ namespace ControleFinanceiro
 
         private void btnIncluirAmortizacao_Click(object sender, EventArgs e)
         {
+            if (this.dgvEmprestimos.Rows.Count <= 0)
+            {
+                MessageBox.Show("Selecione um emprestimo ou inclua um emprestimo!", "BUGOU", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (MessageBox.Show("Deseja incluir uma amortização?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
             {
                 return;
             }
+
+            AmortizacoesEdit frm = new AmortizacoesEdit(this.txtIdUser.Text, this.arquivoJson, this.dgvAmortizacoes, this.dgvEmprestimos.CurrentRow.Cells[0].Value.ToString());
+
+            frm.Show();
+        }
+
+        private void tsmiExcluirEmprestimo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiExcluirAmortizacao_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

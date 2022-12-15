@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ControleFinanceiro</id>
+    <version>1.0.0</version>
+    <authors>ControleFinanceiro</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Newtonsoft.Json" version="13.0.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WindowsForms" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.runtimeconfig.json" target="lib\netcoreapp3.1\ControleFinanceiro.runtimeconfig.json" />
+    <file src="C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\bin\Debug\netcoreapp3.1\ControleFinanceiro.dll" target="lib\netcoreapp3.1\ControleFinanceiro.dll" />
+  </files>
+</package>
