@@ -29,11 +29,10 @@ namespace ControleFinanceiro
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtIdUser = new System.Windows.Forms.TextBox();
-            this.btnExcluirAmortizacao = new System.Windows.Forms.Button();
             this.btnIncluirAmortizacao = new System.Windows.Forms.Button();
-            this.btnExcluirEmprestimo = new System.Windows.Forms.Button();
             this.btnIncluirEmprestimo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvAmortizacoes = new System.Windows.Forms.DataGridView();
@@ -50,20 +49,24 @@ namespace ControleFinanceiro
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmsEmprestimos = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cmsAmortizacoes = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmortizacoes)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimos)).BeginInit();
+            this.cmsEmprestimos.SuspendLayout();
+            this.cmsAmortizacoes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.txtIdUser);
-            this.panel1.Controls.Add(this.btnExcluirAmortizacao);
             this.panel1.Controls.Add(this.btnIncluirAmortizacao);
-            this.panel1.Controls.Add(this.btnExcluirEmprestimo);
             this.panel1.Controls.Add(this.btnIncluirEmprestimo);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
@@ -91,15 +94,6 @@ namespace ControleFinanceiro
             this.txtIdUser.Size = new System.Drawing.Size(27, 23);
             this.txtIdUser.TabIndex = 18;
             // 
-            // btnExcluirAmortizacao
-            // 
-            this.btnExcluirAmortizacao.Location = new System.Drawing.Point(519, 547);
-            this.btnExcluirAmortizacao.Name = "btnExcluirAmortizacao";
-            this.btnExcluirAmortizacao.Size = new System.Drawing.Size(72, 31);
-            this.btnExcluirAmortizacao.TabIndex = 17;
-            this.btnExcluirAmortizacao.Text = "Excluir";
-            this.btnExcluirAmortizacao.UseVisualStyleBackColor = true;
-            // 
             // btnIncluirAmortizacao
             // 
             this.btnIncluirAmortizacao.Location = new System.Drawing.Point(439, 547);
@@ -108,15 +102,7 @@ namespace ControleFinanceiro
             this.btnIncluirAmortizacao.TabIndex = 16;
             this.btnIncluirAmortizacao.Text = "Incluir";
             this.btnIncluirAmortizacao.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluirEmprestimo
-            // 
-            this.btnExcluirEmprestimo.Location = new System.Drawing.Point(87, 547);
-            this.btnExcluirEmprestimo.Name = "btnExcluirEmprestimo";
-            this.btnExcluirEmprestimo.Size = new System.Drawing.Size(72, 31);
-            this.btnExcluirEmprestimo.TabIndex = 15;
-            this.btnExcluirEmprestimo.Text = "Excluir";
-            this.btnExcluirEmprestimo.UseVisualStyleBackColor = true;
+            this.btnIncluirAmortizacao.Click += new System.EventHandler(this.btnIncluirAmortizacao_Click);
             // 
             // btnIncluirEmprestimo
             // 
@@ -126,6 +112,7 @@ namespace ControleFinanceiro
             this.btnIncluirEmprestimo.TabIndex = 14;
             this.btnIncluirEmprestimo.Text = "Incluir";
             this.btnIncluirEmprestimo.UseVisualStyleBackColor = true;
+            this.btnIncluirEmprestimo.Click += new System.EventHandler(this.btnIncluirEmprestimo_Click);
             // 
             // groupBox2
             // 
@@ -139,7 +126,11 @@ namespace ControleFinanceiro
             // 
             // dgvAmortizacoes
             // 
+            this.dgvAmortizacoes.AllowUserToAddRows = false;
+            this.dgvAmortizacoes.AllowUserToDeleteRows = false;
+            this.dgvAmortizacoes.AllowUserToResizeRows = false;
             this.dgvAmortizacoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAmortizacoes.ContextMenuStrip = this.cmsAmortizacoes;
             this.dgvAmortizacoes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAmortizacoes.Location = new System.Drawing.Point(3, 19);
             this.dgvAmortizacoes.MultiSelect = false;
@@ -163,7 +154,11 @@ namespace ControleFinanceiro
             // 
             // dgvEmprestimos
             // 
+            this.dgvEmprestimos.AllowUserToAddRows = false;
+            this.dgvEmprestimos.AllowUserToDeleteRows = false;
+            this.dgvEmprestimos.AllowUserToResizeRows = false;
             this.dgvEmprestimos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmprestimos.ContextMenuStrip = this.cmsEmprestimos;
             this.dgvEmprestimos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmprestimos.Location = new System.Drawing.Point(3, 19);
             this.dgvEmprestimos.MultiSelect = false;
@@ -196,7 +191,7 @@ namespace ControleFinanceiro
             // 
             this.txtEndereco.Location = new System.Drawing.Point(74, 141);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(100, 23);
+            this.txtEndereco.Size = new System.Drawing.Size(354, 23);
             this.txtEndereco.TabIndex = 8;
             // 
             // txtRg
@@ -266,6 +261,32 @@ namespace ControleFinanceiro
             this.label1.TabIndex = 0;
             this.label1.Text = "CPF:";
             // 
+            // cmsEmprestimos
+            // 
+            this.cmsEmprestimos.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.cmsEmprestimos.Name = "cmsEmprestimos";
+            this.cmsEmprestimos.Size = new System.Drawing.Size(110, 26);
+            // 
+            // cmsAmortizacoes
+            // 
+            this.cmsAmortizacoes.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem1});
+            this.cmsAmortizacoes.Name = "cmsAmortizacoes";
+            this.cmsAmortizacoes.Size = new System.Drawing.Size(110, 26);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            // 
+            // excluirToolStripMenuItem1
+            // 
+            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem1.Text = "Excluir";
+            // 
             // frmUsuariosEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -281,6 +302,8 @@ namespace ControleFinanceiro
             ((System.ComponentModel.ISupportInitialize)(this.dgvAmortizacoes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmprestimos)).EndInit();
+            this.cmsEmprestimos.ResumeLayout(false);
+            this.cmsAmortizacoes.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -301,12 +324,14 @@ namespace ControleFinanceiro
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvEmprestimos;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnExcluirEmprestimo;
         private System.Windows.Forms.Button btnIncluirEmprestimo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvAmortizacoes;
-        private System.Windows.Forms.Button btnExcluirAmortizacao;
         private System.Windows.Forms.Button btnIncluirAmortizacao;
         private System.Windows.Forms.TextBox txtIdUser;
+        private System.Windows.Forms.ContextMenuStrip cmsAmortizacoes;
+        private System.Windows.Forms.ContextMenuStrip cmsEmprestimos;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

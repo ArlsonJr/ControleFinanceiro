@@ -29,12 +29,16 @@ namespace ControleFinanceiro
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.cmsMenuContexto = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiExcluir = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            this.cmsMenuContexto.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,7 +55,7 @@ namespace ControleFinanceiro
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(119, 10);
+            this.btnEditar.Location = new System.Drawing.Point(106, 12);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 3;
@@ -61,7 +65,7 @@ namespace ControleFinanceiro
             // 
             // btnIncluir
             // 
-            this.btnIncluir.Location = new System.Drawing.Point(36, 10);
+            this.btnIncluir.Location = new System.Drawing.Point(7, 12);
             this.btnIncluir.Name = "btnIncluir";
             this.btnIncluir.Size = new System.Drawing.Size(75, 23);
             this.btnIncluir.TabIndex = 2;
@@ -71,7 +75,11 @@ namespace ControleFinanceiro
             // 
             // dgvUsuarios
             // 
+            this.dgvUsuarios.AllowUserToAddRows = false;
+            this.dgvUsuarios.AllowUserToDeleteRows = false;
+            this.dgvUsuarios.AllowUserToResizeRows = false;
             this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.ContextMenuStrip = this.cmsMenuContexto;
             this.dgvUsuarios.Location = new System.Drawing.Point(-2, 48);
             this.dgvUsuarios.MultiSelect = false;
             this.dgvUsuarios.Name = "dgvUsuarios";
@@ -82,6 +90,21 @@ namespace ControleFinanceiro
             this.dgvUsuarios.Size = new System.Drawing.Size(800, 400);
             this.dgvUsuarios.TabIndex = 1;
             this.dgvUsuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuarios_CellDoubleClick);
+            this.dgvUsuarios.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_CellMouseDown);
+            // 
+            // cmsMenuContexto
+            // 
+            this.cmsMenuContexto.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiExcluir});
+            this.cmsMenuContexto.Name = "cmsMenuContexto";
+            this.cmsMenuContexto.Size = new System.Drawing.Size(110, 26);
+            // 
+            // tsmiExcluir
+            // 
+            this.tsmiExcluir.Name = "tsmiExcluir";
+            this.tsmiExcluir.Size = new System.Drawing.Size(109, 22);
+            this.tsmiExcluir.Text = "Excluir";
+            this.tsmiExcluir.Click += new System.EventHandler(this.tsmiExcluir_Click);
             // 
             // UsuariosView
             // 
@@ -94,6 +117,7 @@ namespace ControleFinanceiro
             this.Load += new System.EventHandler(this.Usuarios_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            this.cmsMenuContexto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -104,5 +128,7 @@ namespace ControleFinanceiro
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.ContextMenuStrip cmsMenuContexto;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExcluir;
     }
 }

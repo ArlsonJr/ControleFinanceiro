@@ -3,6 +3,7 @@
 using System;
 using System.Data;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -122,6 +123,50 @@ namespace ControleFinanceiro
 
                 frmUserEdit.Show();
             }
+        }
+
+        private void tsmiExcluir_Click(object sender, EventArgs e)
+        {
+            var json = File.ReadAllText(arquivoJson);
+
+            try
+            {
+                var jObject = JObject.Parse(json);
+
+                JArray arrayUsuarios = (JArray)jObject["usuarios"];
+
+                var userId = this.dgvUsuarios.CurrentRow.Cells[0].Value.ToString();
+
+                if (userId.Length > 0)
+                {
+                    var userDeletar = arrayUsuarios.FirstOrDefault(x => x["id"].Value<string>() == userId);
+                    arrayUsuarios.Remove(userDeletar);
+                    string saida = Newtonsoft.Json.JsonConvert.SerializeObject(jObject, Newtonsoft.Json.Formatting.Indented);
+                    File.WriteAllText(arquivoJson, saida);
+                }
+                else
+                {
+                    MessageBox.Show("O ID do usuário é inválido, tente novamente!", "BUGOU", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.Atualizar();
+                }
+
+                this.Atualizar();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private void dgvUsuarios_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //seleciona a row com o botão direito do mouse
+            if (e.ColumnIndex < 0 || e.RowIndex < 0 || e.Button != MouseButtons.Right)
+                return;
+
+            this.dgvUsuarios.Rows[e.RowIndex].Selected = true;
+
+            this.dgvUsuarios.CurrentCell = this.dgvUsuarios.Rows[e.RowIndex].Cells[e.ColumnIndex];
         }
     }
 }

@@ -36,3 +36,5 @@ C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.pdb
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.genruntimeconfig.cache
 C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.UsuariosView.resources
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.AmortizacoesEdit.resources
+C:\Projetos\Controle Financeiro\ControleFinanceiro\ControleFinanceiro\obj\Debug\netcoreapp3.1\ControleFinanceiro.EmprestimosEdit.resources

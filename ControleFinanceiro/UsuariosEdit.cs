@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ControleFinanceiro
 {
@@ -106,25 +107,55 @@ namespace ControleFinanceiro
                 return;
             }
 
-            string cpf = this.txtCPF.TextLength == 11 ? string.Format("###.###.###-##", this.txtCPF.Text) : this.txtCPF.Text;
-
-            var newUser = "{\"nome\": \"" + this.txtNome.Text + "\"," + "\"cpf\": \"" + this.txtCPF.Text + "\"}";
-
             try
             {
-                var json = File.ReadAllText(this.arquivoJson);
+                var json = File.ReadAllText(arquivoJson);
                 var jsonObj = JObject.Parse(json);
-
                 var arrayUsuarios = jsonObj.GetValue("usuarios") as JArray;
 
-                var novoUsuario = JObject.Parse(newUser);
+                if (this.opcao == "Editar")
+                {
+                    if (this.txtIdUser.TextLength > 0)
+                    {
+                        foreach (var user in arrayUsuarios.Where(obj => obj["id"].Value<string>() == this.txtIdUser.Text))
+                        {
+                            user["nome"] = !string.IsNullOrEmpty(this.txtNome.Text) ? this.txtNome.Text : "";
+                            user["cpf"] = !string.IsNullOrEmpty(this.txtCPF.Text) ? this.txtCPF.Text : "";
+                            user["rg"] = !string.IsNullOrEmpty(this.txtRg.Text) ? this.txtRg.Text : "";
+                            user["endereco"] = !string.IsNullOrEmpty(this.txtEndereco.Text) ? this.txtEndereco.Text : "";
+                            user["telefone"] = !string.IsNullOrEmpty(this.txtTelefone.Text) ? this.txtTelefone.Text : "";
+                        }
 
-                arrayUsuarios.Add(novoUsuario);
+                        jsonObj["usuarios"] = arrayUsuarios;
+                        string saida = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                        File.WriteAllText(arquivoJson, saida);
+                    }
+                    else
+                    {
+                        MessageBox.Show("O ID do usuário é inválido, tente novamente!", "BUGOU", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    JArray max = (JArray)jsonObj["usuarios"];
 
-                jsonObj["usuarios"] = arrayUsuarios;
+                    var item = max.Max(x => x["id"].Value<string>());
 
-                string novoJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-                File.WriteAllText(arquivoJson, novoJsonResult);
+                    int id = Convert.ToInt32(item);
+
+                    id++;
+
+                    var newUser = "{\"id\": \"" + id + "\"," + "\"nome\": \"" + this.txtNome.Text + "\"," + "\"cpf\": \"" + this.txtCPF.Text + "\"}";
+
+                    var novoUsuario = JObject.Parse(newUser);
+
+                    arrayUsuarios.Add(novoUsuario);
+
+                    jsonObj["usuarios"] = arrayUsuarios;
+
+                    string novoJsonResult = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+                    File.WriteAllText(arquivoJson, novoJsonResult);
+                }
 
                 this.Close();
 
@@ -182,6 +213,26 @@ namespace ControleFinanceiro
                 this.dgvAmortizacoes.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
 
+            }
+        }
+
+        private void btnIncluirEmprestimo_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja incluir um emprestimo?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+                return;
+            }
+
+            EmprestimosEdit frm = new EmprestimosEdit(this.txtIdUser.Text, this.arquivoJson, this.dgvEmprestimos);
+
+            frm.Show();
+        }
+
+        private void btnIncluirAmortizacao_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja incluir uma amortização?", this.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+                return;
             }
         }
     }
